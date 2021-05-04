@@ -4,7 +4,7 @@ def lambda_handler(event, context):
     # TODO implement
     print(event)
     data = {
-        'output': 'Hello from '+ event['Country'],
+        'output': 'Hello from uk and '+ event['Country'],
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
     return {'statusCode': 200,
