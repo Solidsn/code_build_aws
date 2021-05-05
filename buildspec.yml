@@ -12,7 +12,7 @@ phases:
     commands:
       - sam build
       - export BUCKET=lambda-package-deploy-01
-      - sam package --s3-bucket $BUCKET --output-template-file
+      - sam package --s3-bucket $BUCKET --output-template-file outputtemplate.yml
 artifacts:
   type: zip
   files:
