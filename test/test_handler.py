@@ -1,5 +1,5 @@
 import unittest
-import lambda_function
+from src import lambda_function
 
 
 class TestHandlerCase(unittest.TestCase):
