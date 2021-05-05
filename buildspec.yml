@@ -3,14 +3,15 @@ phases:
   install:
     runtime-versions:
       python: 3.7
-  pre_build:
     commands:
       - pip install --upgrade awscli
+  pre_build:
+    commands:
       - python -m unittest discover tests
   build:
     commands:
       - sam build
-      - export BUCKET=test-pipeline-output-bucket
+      - export BUCKET=lambda-package-deploy-01
       - sam package --s3-bucket $BUCKET --output-template-file
   outputtemplate.yml
 artifacts:
